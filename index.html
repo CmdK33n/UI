@@ -17,6 +17,10 @@ body {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
+
+#optionsListContainer {
+	display: none;
+}
 </style>
 <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
 <link href="assets/bootstrap/css/main.css" rel="stylesheet" />
@@ -276,7 +280,7 @@ body {
 <script src="assets/libretees/js/ui.js" type="text/javascript"></script>
 <script>
 
-$('#userOptions').one('mouseenter', function() {
+$(function() {
 	var html = '<div id="optionsListContainer" class="row-fluid">\
 				<div class="span12 alert alert-info">\
 				<ul id="optionsList" class="unstyled">\
@@ -284,15 +288,14 @@ $('#userOptions').one('mouseenter', function() {
 				</div>\
 				</div>';
 
-	$(html).appendTo('#contributeButtonContainer')
-	       .hide();
+	$(html).appendTo('#contributeButtonContainer');
 
 	$('#userOptions').hover(
 		function() {
-			$('#optionsListContainer').toggle('slide', {direction:'down'});
+			$('#optionsListContainer').show();
 		},
 		function() {
-			$('#optionsListContainer').toggle('slide', {direction:'up'});
+			$('#optionsListContainer').hide();
 		}
 	);
 });
