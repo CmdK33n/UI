@@ -281,6 +281,8 @@ body {
 <script>
 
 $(function() {
+	var numSelected = 0;
+
 	var html = '<div id="optionsListContainer" class="row-fluid">\
 				<div class="span12 alert alert-info">\
 				<ul id="optionsList" class="unstyled">\
@@ -298,6 +300,91 @@ $(function() {
 			$('#optionsListContainer').hide();
 		}
 	);
+
+	var onUserOptionButtonClick = function(event) {
+		console.log(event.type);
+
+			$(this)
+				.switchClass('btn-info', 'btn-warning', 400, 'easeInBounce', function() {
+					$(this).switchClass('btn-warning', 'btn-info');
+				})
+				.unbind('click')
+				.click(function() {
+					$(this)
+						.removeClass('btn-info')
+						.unbind('click')
+						.bind('click', onUserOptionButtonClick)
+						.bind('mouseleave', function() {
+							$(this).removeClass('btn-info');
+						});
+
+					return false;
+				})
+				.unbind('mouseleave');
+	};
+
+	$('.userOptionButton').click(onUserOptionButtonClick);
+
+	$('.userOptionButton').hover(
+		function (event) {
+			console.log(event.type);
+			if (!$(this).hasClass('btn-info') && !$(this).hasClass('btn-success')) {
+				$(this).addClass('btn-info');
+			}
+		},
+		function (event) {
+			console.log(event.type);
+			if ($(this).hasClass('btn-info') && !$(this).hasClass('btn-success')) {
+				$(this).removeClass('btn-info');
+			}
+		}
+	);
+
+	$('.userOptionButton').hover(
+		function() {
+			var $out = $('i[class^="icon-"]',this).attr('class');
+			var html = '<li><span class="badge badge-warning">'
+			html += "<i class=" + $out + "></i></span>";
+			var innerHTML = '';
+
+
+			switch($out) {
+			case 'icon-thumbs-up':
+				innerHTML = 'send a thankyou';
+				break;
+			case 'icon-facebook':
+				innerHTML = 'like on facebook';
+				break;
+			case 'icon-twitter-3':
+				innerHTML = 'tweet on twitter';
+				break;
+			case 'icon-google__x2B_':
+				innerHTML = '+1 on google plus';
+				break;
+			case 'icon-reddit':
+				innerHTML = 'upvote on reddit';
+				break;
+			case 'icon-coffee2':
+				innerHTML = 'buy a coffee - contribute $1';
+				break;
+			case 'icon-cash-usd':
+				innerHTML = 'contribute $5';
+				break;
+			case 'icon-tee':
+				innerHTML = 'buy a t-shirt for yourself - contribute $1';
+				break;
+			default:
+
+			}
+			html += '<span class="label">' + innerHTML + ' </span>';
+			html += '</li>';
+			console.log($out, innerHTML, html);
+			$('#optionsList').append(html);
+		},
+		function() {
+
+		}
+	);
 });
 
 
@@ -307,10 +394,6 @@ $(function() {
 				<div class="row-fluid">
 					<div class="span12 alert alert-info">
 						<ul class="actions unstyled">
-							<li><span class="badge badge-warning">
-								<i class="icon-thumbs-up"></i></span>
-								<span class="label">Send a Thank You</span>
-							</li>
 							<li><span class="badge badge-warning">
 								<i class="icon-facebook"></i></span>
 								<span class="label">Like on Facebook</span>
