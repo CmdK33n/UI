@@ -24,7 +24,7 @@ body {
 <!-- Pictonic -->
 <link href="assets/pictonic/css/pictonic.css" rel="stylesheet" />
 <!--[if lt IE 8]>
-<script src="../pictonic/js/pictonic.min.js" type="text/javascript"></script>
+<script src="assets/pictonic/js/pictonic.min.js" type="text/javascript"></script>
 <![endif]-->
 </head>
 <body>
@@ -68,11 +68,12 @@ body {
 				<div class="row-fluid">
 					<div class="span12 tabbable">
 						<ul class="nav nav-pills">
-							<li class="active">
-							<a data-toggle="tab" href="#pane1">Feature</a></li>
+							<li class="active"><a data-toggle="tab" href="#pane1">Feature</a></li>
+							<li><a data-toggle="tab" href="#pane2">tech@tyler</a></li>
 							<li><a data-toggle="tab" href="#pane2">Knoppix</a></li>
 							<li><a data-toggle="tab" href="#pane3">iTALC</a></li>
 							<li><a data-toggle="tab" href="#pane4">MineTest</a></li>
+							<li><a data-toggle="tab" href="#pane4">What You Can Do</a></li>
 						</ul>
 						<div class="tab-content">
 							<div id="pane1" class="tab-pane active">
@@ -116,7 +117,14 @@ body {
 					<div class="span12">
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 						Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum 
-						at, laoreet mattis, massa. Sed eleifend nonummy diam.</p>
+						at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent 
+						mauris ante, elementum et, bibendum at, posuere sit amet, nibh. 
+						Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse 
+						vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam 
+						vehicula mi at mauris. Maecenas placerat, nisl at consequat 
+						rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis 
+						lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet 
+						vitae, tellus. Sed odio est, auctor ac, sollicitudin in, 
 					</div>
 				</div>
 				<!-- ---------------------------------------- -->
@@ -126,25 +134,20 @@ body {
 				<!-- Start of Options                         -->
 				<!-- ---------------------------------------- -->
 				<div class="row-fluid">
-					<div class="span12 btn-toolbar">
+					<div id="userOptions" class="span12 btn-toolbar">
 						<span class="btn-group">
-						<button class="btn" type="button">
-						<i class="icon-thumbs-up"></i></button>
-						<button class="btn" type="button">
-						<i class="icon-facebook"></i></button>
-						<button class="btn" type="button">
-						<i class="icon-twitter-3"></i></button>
-						<button class="btn" type="button">
-						<i class="icon-google__x2B_"></i></button>
-						<button class="btn" type="button">
-						<i class="icon-reddit"></i></button></span>
+							<button class="btn userOptionButton" type="button" title="Say Thank You"><i class="icon-thumbs-up"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-facebook"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-twitter-3"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-google__x2B_"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-reddit"></i></button>
+						</span>
 						<span class="btn-group">
-						<button class="btn" type="button">
-						<i class="icon-coffee2"></i></button>
-						<button class="btn" type="button">
-						<i class="icon-cash-usd"></i></button>
-						<button class="btn" type="button"><i class="icon-tee">
-						</i></button></span></div>
+							<button class="btn userOptionButton" type="button"><i class="icon-coffee2"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-cash-usd"></i></button>
+							<button class="btn userOptionButton" type="button"><i class="icon-tee"></i></button>
+						</span>
+					</div>
 				</div>
 				<!-- ---------------------------------------- -->
 				<!-- End of Options                           -->
@@ -152,54 +155,18 @@ body {
 				<!-- ---------------------------------------- -->
 				<!-- Start of Contribute                        -->
 				<!-- ---------------------------------------- -->
-				<div class="row-fluid">
-					<div class="span12 btn-group">
-						<button class="btn btn-block btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-						Contribute <span class="icon-star"></span></button>
-						<ul class="dropdown-menu">
-							<li><a href="#">and Get a T-Shirt </a></li>
-							<li><a href="#">and Get a #thankyou </a></li>
-						</ul>
+				<div id="contributeButtonContainer" class="row-fluid">
+					<div class="span12">
+						<button id="contributeButton" class="btn btn-block btn-large btn-primary" href="#">Contribute 
+							<span class="icon-star"></span>
+						</button>
 					</div>
 				</div>
 				<!-- ---------------------------------------- -->
 				<!-- End of Contribute                        -->
 				<!-- ---------------------------------------- -->
 				<!-- ---------------------------------------- -->
-				<!-- Start of Actions                         -->
-				<!-- ---------------------------------------- -->
-				<div class="row-fluid">
-					<div class="span12">
-						<ul class="actions">
-							<li><span class="badge badge-warning">
-							<i class="icon-thumbs-up"></i></span>
-							<span class="label">Send a Thank You</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-facebook"></i></span>
-							<span class="label">Like on Facebook</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-twitter-3"></i></span>
-							<span class="label">Tweet on Twitter</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-google__x2B_"></i></span>
-							<span class="label">+1 on Google Plus</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-coffee2"></i></span>
-							<span class="label">Contribute $1</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-cash-usd"></i></span>
-							<span class="label">Contribute $5</span></li>
-							<li><span class="badge badge-warning">
-							<i class="icon-tee"></i></span><span class="label">Buy 
-							a T-Shirt</span></li>
-						</ul>
-					</div>
-				</div>
-				<!-- ---------------------------------------- -->
-				<!-- End of Actions                           -->
-				<!-- ---------------------------------------- -->
-				<!-- ---------------------------------------- -->
-				<!-- Start of Actions                         -->
+				<!-- Start of Contributors                    -->
 				<!-- ---------------------------------------- -->
 				<div class="row-fluid">
 					<div class="span12">
@@ -264,9 +231,6 @@ body {
 				<!-- End FeaturedSection RightSide --></div>
 			<!-- End FeaturedSection --></div>
 	</div>
-	<footer>
-		<p>&copy; LibreTees, 2013</p>
-	</footer>
 </div>
 <div class="row-fluid">
 	<!-- Start FeaturedSection -->
@@ -291,12 +255,120 @@ body {
 		</div>
 	</div>
 </div>
+<div class="row-fluid">
+	<div class="span10 offset1">
+		<div class="span12">
+			<footer class="pull-right">
+				<p>&copy; LibreTees, 2013</p>
+			</footer>
+		</div>
+	</div>
+</div>
 <!-- Start BelowFeature -->
 <!-- End WhatWeDo Pill -->
-<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<link rel="stylesheet" href="assets/jquery-ui-1.10.0/themes/base/jquery-ui.css" />
+<script src="assets/jquery-ui-1.10.0/jquery-1.9.0.js"></script>
+<script src="assets/jquery-ui-1.10.0/ui/jquery-ui.js"></script>
+
+
 <script src="assets/bootstrap/js/vendor/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/bootstrap/js/main.js" type="text/javascript"></script>
 <script src="assets/libretees/js/ui.js" type="text/javascript"></script>
+<script>
 
+$('#userOptions').one('mouseenter', function() {
+	var html = '<div id="optionsListContainer" class="row-fluid">\
+				<div class="span12 alert alert-info">\
+				<ul id="optionsList" class="unstyled">\
+				</ul>\
+				</div>\
+				</div>';
+
+	$(html).appendTo('#contributeButtonContainer')
+	       .hide();
+
+	$('#userOptions').hover(
+		function() {
+			$('#optionsListContainer').toggle('slide', {direction:'down'});
+		},
+		function() {
+			$('#optionsListContainer').toggle('slide', {direction:'up'});
+		}
+	);
+});
+
+
+/*			<!-- ---------------------------------------- -->
+				<!-- Start of Actions                         -->
+				<!-- ---------------------------------------- -->
+				<div class="row-fluid">
+					<div class="span12 alert alert-info">
+						<ul class="actions unstyled">
+							<li><span class="badge badge-warning">
+								<i class="icon-thumbs-up"></i></span>
+								<span class="label">Send a Thank You</span>
+							</li>
+							<li><span class="badge badge-warning">
+								<i class="icon-facebook"></i></span>
+								<span class="label">Like on Facebook</span>
+							</li>
+							<li><span class="badge badge-warning">
+								<i class="icon-twitter-3"></i></span>
+								<span class="label">Tweet on Twitter</span>
+							</li>
+							<li><span class="badge badge-warning">
+								<i class="icon-google__x2B_"></i></span>
+								<span class="label">+1 on Google Plus</span>
+							</li>
+							<li>
+								<span class="badge badge-warning">
+									<i class="icon-coffee2"></i>
+								</span>
+								<span class="label">Contribute $1</span>
+							</li>
+							<li>
+								<span class="badge badge-warning">
+									<i class="icon-cash-usd"></i>
+								</span>
+								<span class="label">Contribute $5</span>
+							</li>
+							<li>
+								<span class="badge badge-warning">
+									<i class="icon-tee"></i>
+								</span>
+								<span class="label">Buy a T-Shirt</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ---------------------------------------- -->
+				<!-- End of Actions                           -->
+				<!-- ---------------------------------------- -->
+*/
+
+if (jQuery.ui) {
+  //alert("jQuery UI Loaded.");
+}
+
+
+
+
+  $(function() {
+    $( document ).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+  });
+</script>
 </body>
 </html>
